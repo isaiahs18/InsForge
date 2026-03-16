@@ -137,6 +137,26 @@ To verify the connection, send the following prompt to your agent:
 I'm using InsForge as my backend platform, call InsForge MCP's fetch-docs tool to learn about InsForge instructions.
 ```
 
+#### Deploying for a fantasy football bot
+
+If your bot runs on another platform (web app, Discord bot, scheduled worker, etc.), deploy InsForge first and then connect your bot to it:
+
+1. **Pick a deployment target**
+   - Use **[insforge.dev](https://insforge.dev)** for managed hosting.
+   - Use **Docker Compose** (above) for local/self-hosted setup.
+   - Use **One-click Deployment** (below) for fast cloud setup.
+2. **Get your backend credentials**
+   - Open the InsForge dashboard and copy your backend URL and anon key.
+3. **Connect from your bot service**
+   - Install SDK: `npm install @insforge/sdk@latest`
+   - Initialize client in your bot backend with your backend URL + anon key.
+4. **Model your bot data**
+   - Create tables for leagues, teams, matchups, and projections.
+   - Use InsForge Auth for user accounts and Storage for uploaded assets.
+   - Use Functions for server-side jobs (for example, sync roster updates on a schedule).
+5. **Use AI agents for faster scaffolding**
+   - Prompt your coding agent to call InsForge MCP `fetch-docs` first, then generate your bot integration using the latest SDK patterns.
+
 ### One-click Deployment
 
 In addition to running InsForge locally, you can also launch InsForge using a pre-configured setup. This allows you to get up and running quickly with InsForge without installing Docker on your local machine.
