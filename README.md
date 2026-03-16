@@ -154,7 +154,7 @@ If your bot runs on another platform (web app, Discord bot, scheduled worker, et
    - Create tables for leagues, teams, matchups, and projections.
    - Use InsForge Auth for user accounts and Storage for uploaded assets.
    - Use Functions for server-side jobs (for example, sync roster updates on a schedule).
-5. **Have your agent scaffold faster**
+5. **Use AI agents for faster scaffolding**
    - Prompt your coding agent to call InsForge MCP `fetch-docs` first, then generate your bot integration using the latest SDK patterns.
 
 ### One-click Deployment
